@@ -66,9 +66,9 @@ public class SnackMachineTest {
 
     @Test
     void new_snack_machine_should_have_three_types_of_snacks() {
-        assertThat(snackMachine.chewingGums().quantity()).isEqualTo(DEFAULT_QUANTITY);
-        assertThat(snackMachine.chips().quantity()).isEqualTo(DEFAULT_QUANTITY);
-        assertThat(snackMachine.chocolates().quantity()).isEqualTo(DEFAULT_QUANTITY);
+        assertThat(snackMachine.chewingGums()).isEqualTo(DEFAULT_QUANTITY);
+        assertThat(snackMachine.chips()).isEqualTo(DEFAULT_QUANTITY);
+        assertThat(snackMachine.chocolates()).isEqualTo(DEFAULT_QUANTITY);
     }
 
     @Test
@@ -109,14 +109,14 @@ public class SnackMachineTest {
 
         snackMachine.buySnack(SnackType.CHOCOLATE);
 
-        assertThat(snackMachine.chewingGums().quantity()).isEqualTo(DEFAULT_QUANTITY - 1);
-        assertThat(snackMachine.chips().quantity()).isEqualTo(DEFAULT_QUANTITY - 1);
-        assertThat(snackMachine.chocolates().quantity()).isEqualTo(DEFAULT_QUANTITY - 1);
+        assertThat(snackMachine.chewingGums()).isEqualTo(DEFAULT_QUANTITY - 1);
+        assertThat(snackMachine.chips()).isEqualTo(DEFAULT_QUANTITY - 1);
+        assertThat(snackMachine.chocolates()).isEqualTo(DEFAULT_QUANTITY - 1);
     }
 
     @Test
     void buying_unavailable_quantity_of_a_snack_should_fail() {
-        while (snackMachine.chewingGums().quantity() > 0) {
+        while (snackMachine.chewingGums() > 0) {
             snackMachine.insertMoney(Money.QUARTER_DINAR);
             snackMachine.insertMoney(Money.QUARTER_DINAR);
 

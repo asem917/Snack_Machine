@@ -1,9 +1,8 @@
 package com.progressoft.induction;
 
-public enum  SnackType {
+public enum SnackType {
 
-     CHEWING_GUM,CHIPS,CHOCOLATE;
-
+    CHEWING_GUM, CHIPS, CHOCOLATE
 
 
 }
