@@ -43,7 +43,6 @@ public class SnackMachine {
     }
 
     public Money moneyInTransaction() {
-
         return moneyInTransaction;
     }
 
